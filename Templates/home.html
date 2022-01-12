@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container center">
+<h3 class="prediction">{{pred}}</h3>
+<h1>Predict insurance bill</h1>
+<form action='/predict' method='post'>
+    <input type="text" placeholder="Age" name="age"></input>
+    <input type="text" placeholder="Sex" name="sex"></input>
+    <input type="text" placeholder="BMI" name="bmi"></input>
+    <input type="text" placeholder="Children" name="children"></input>
+    <input type="text" placeholder="Smoker" name="smoker"></input>
+    <input type="text" placeholder="Region" name="region"></input>
+    <input type="submit" value="predict" class="submit_button"></input>
+</form>
+
+</div>
+{% endblock %}
